@@ -1,15 +1,21 @@
+-- Comment this out to switch neo-tree config
+-- if true then return {} end
+
+-- Something about legacy commands
+-- vim.cmd([[ let g:neo_tree_remove_legacy_commands = 1 ]])
+
 return {
 {
   "nvim-neo-tree/neo-tree.nvim",
-    branch = "v2.x",
-    dependencies = { 
+    version = "*",
+    dependencies = {
       "nvim-lua/plenary.nvim",
       "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
       "MunifTanjim/nui.nvim",
       {
         -- only needed if you want to use the commands with "_with_window_picker" suffix
         's1n7ax/nvim-window-picker',
-        version = "v1.*",
+        version = "*",
         config = function()
           require'window-picker'.setup({
             autoselect_one = true,
@@ -263,6 +269,7 @@ return {
         }
       })
 
+      -- TODO: change this or something
       vim.cmd([[nnoremap \ :Neotree reveal<cr>]])
     end
 }
