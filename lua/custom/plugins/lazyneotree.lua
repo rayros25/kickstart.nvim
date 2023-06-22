@@ -1,6 +1,6 @@
 -- Neo-tree config from LazyVim
 -- Uncomment line below to switch configs
--- if true then return {} end
+if true then return {} end
 
 -- Something about legacy commands
 vim.cmd([[ let g:neo_tree_remove_legacy_commands = 1 ]])
