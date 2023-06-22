@@ -254,6 +254,21 @@ vim.o.completeopt = 'menuone,noselect'
 -- NOTE: You should make sure your terminal supports this
 vim.o.termguicolors = true
 
+
+-- Set up bufferline.nvim
+require("bufferline").setup{
+  options = {
+    offsets = {
+      {
+        filetype = "neo-tree",
+        separator = true
+      }
+    },
+    color_icons = true,
+    show_buffer_icons = true,
+  }
+}
+
 -- [[ Basic Keymaps ]]
 
 -- Keymaps for better default experience
