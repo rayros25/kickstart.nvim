@@ -255,6 +255,9 @@ vim.o.completeopt = 'menuone,noselect'
 vim.o.termguicolors = true
 
 
+
+-- [[ Fine-tuning Some Plugins ]]
+
 -- Set up bufferline.nvim
 require("bufferline").setup{
   options = {
@@ -268,6 +271,22 @@ require("bufferline").setup{
     show_buffer_icons = true,
   }
 }
+
+-- lualine
+require('lualine').setup{
+  options = {
+    globalstatus = true,
+    icons_enabled = true,
+    disabled_filetypes = {
+      statusline = { "neo-tree" },
+      winbar = {},
+    },
+    -- ignore_focus = {
+    --   "neo-tree"
+    -- }
+  }
+}
+
 
 -- [[ Basic Keymaps ]]
 
