@@ -12,7 +12,8 @@ return {
             config = {
               workspaces = {
                 notes = "~/notes",
-                comp40 = "~/Desktop/COMP40/Notes"
+                comp40 = "~/Desktop/COMP40/Notes",
+                docs = "~/Documents/Neorg",
               },
               default_workspace = "comp40",
             },
