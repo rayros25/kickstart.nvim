@@ -195,6 +195,7 @@ require('lazy').setup({
   { import = 'custom.plugins' },
 }, {})
 
+
 -- [[ Setting options ]]
 -- See `:help vim.o`
 
@@ -286,6 +287,11 @@ require('lualine').setup{
     -- }
   }
 }
+
+-- vimtex i think
+vim.cmd("filetype plugin on")
+vim.cmd("syntax enable")
+vim.g.vimtex_view_method = 'zathura'
 
 
 -- [[ Basic Keymaps ]]

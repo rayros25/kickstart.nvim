@@ -1,0 +1,8 @@
+return {
+    {
+        "lervag/vimtex",
+        -- opts = {
+        --
+        -- },
+    }
+}
