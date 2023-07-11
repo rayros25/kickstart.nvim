@@ -8,8 +8,7 @@ A starting point for Neovim that is:
 * Single-file (with examples of moving to multi-file)
 * Documented
 * Modular
-
-This repo is meant to be used as by **YOU** to begin your Neovim journey; remove the things you don't use and add what you miss.
+* Very cool and sexy (like me)
 
 Kickstart.nvim targets *only* the latest ['stable'](https://github.com/neovim/neovim/releases/tag/stable) and latest ['nightly'](https://github.com/neovim/neovim/releases/tag/nightly) of Neovim. If you are experiencing issues, please make sure you have the latest versions.
 
@@ -130,18 +129,3 @@ Each PR, especially those which increase the line count, should have a descripti
 * Are there any cool videos about this plugin?
   * Current iteration of kickstart (coming soon)
   * Here is one about the previous iteration of kickstart: [video introduction to Kickstart.nvim](https://youtu.be/stqUbv-5u2s). Note the install via init.lua no longer works as specified. Please follow the install instructions in this file instead as they're up to date.
-
-### Windows Installation
-
-Installation may require installing build tools, and updating the run command for `telescope-fzf-native`
-
-See `telescope-fzf-native` documentation for [more details](https://github.com/nvim-telescope/telescope-fzf-native.nvim#installation)
-
-This requires:
-
-- Install CMake, and the Microsoft C++ Build Tools on Windows
-
-```lua
-{'nvim-telescope/telescope-fzf-native.nvim', build = 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build' }
-```
-

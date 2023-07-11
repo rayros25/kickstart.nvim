@@ -300,6 +300,11 @@ else
   -- vim.g.vimtex_view_sioyek_exe = '/Applications/sioyek.app/Contents/MacOS/sioyek'
 end
 
+-- Mini.Pair 
+-- only autocomplete for $$ in tex files
+vim.cmd("au FileType tex lua MiniPairs.map_buf(0, 'i', '$', {action = 'closeopen', pair = '$$'})")
+
+
 
 -- [[ Basic Keymaps ]]
 
