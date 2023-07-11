@@ -4,3 +4,28 @@ snippet begin \begin{} ... \end{} block
 	\\begin{${1:env}}
 		${0:${VISUAL}}
 	\\end{$1}
+
+snippet bigcup Arbitrary Union
+	\\bigcup_{${2:subtext}}^{${3:supertext}}
+
+snippet bigcap Arbitrary Intersection
+	\\bigcap_{${2:subtext}}^{${3:supertext}}
+
+# testing some stuff
+# snippet for
+# 	for ($1 = ${2:start}; ${1:i} < ${3:end}; $1${4:++}) {
+# 		${0:/* code */}
+# 	}
+# snippet idk
+# 	sub thing? ${1/foo/bar/g}
+# 	here's a two: $2
+# 	yeah idk $1
+
+# snippet GPL3
+# 	${1:one line to give the program's name and a brief description.}
+# 	Copyright `&enc[:2] == "utf" ? "©" : "(c)"` `strftime("%Y")` ${2:`g:snips_author`}
+#
+# 	This program is free software: you can redistribute it and/or modify
+# 	it under the terms of the GNU General Public License as published by
+# 	the Free Software Foundation, either version 3 of the License, or
+# 	(at your option) any later version.
