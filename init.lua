@@ -299,7 +299,6 @@ if vim.loop.os_uname().sysname == 'Darwin' then
 else
   -- vim.g.vimtex_view_sioyek_exe = '/Applications/sioyek.app/Contents/MacOS/sioyek'
 end
--- TODO: Change it so that it works for Linux?
 
 
 -- [[ Basic Keymaps ]]
@@ -523,6 +522,7 @@ mason_lspconfig.setup_handlers {
 local cmp = require 'cmp'
 local luasnip = require 'luasnip'
 require('luasnip.loaders.from_vscode').lazy_load()
+require('luasnip.loaders.from_snipmate').lazy_load()
 luasnip.config.setup {}
 
 cmp.setup {
