@@ -292,11 +292,11 @@ require('lualine').setup{
 -- vimtex i think
 vim.cmd("filetype plugin on")
 vim.cmd("syntax enable")
--- vim.g.vimtex_view_method = 'zathura'
-vim.g.vimtex_view_method = 'sioyek'
 if vim.loop.os_uname().sysname == 'Darwin' then
   vim.g.vimtex_view_sioyek_exe = '/Applications/sioyek.app/Contents/MacOS/sioyek'
+  vim.g.vimtex_view_method = 'sioyek'
 else
+  vim.g.vimtex_view_method = 'zathura'
   -- vim.g.vimtex_view_sioyek_exe = '/Applications/sioyek.app/Contents/MacOS/sioyek'
 end
 -- TODO: Change it so that it works for Linux?
