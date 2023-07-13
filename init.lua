@@ -59,6 +59,9 @@ require('lazy').setup({
   -- Detect tabstop and shiftwidth automatically
   'tpope/vim-sleuth',
 
+  -- Improve navigation with tmux
+  'christoomey/vim-tmux-navigator',
+
   -- NOTE: This is where your plugins related to LSP can be installed.
   --  The configuration is done below. Search for lspconfig to find it below.
   {
@@ -241,6 +244,19 @@ vim.o.completeopt = 'menuone,noselect'
 
 -- NOTE: You should make sure your terminal supports this
 vim.o.termguicolors = true
+
+
+
+-- P.S. Thanks Cole!
+
+-- Toggle ruler at 81st 
+vim.cmd([[nnoremap <leader>c :execute "set colorcolumn=" . (&colorcolumn == "" ? "81" : "")<CR>]])
+
+local opts = { noremap = true, silent = true }
+
+-- Up/Down to move selected text
+vim.set.keymap("v", "J", ":m '>+1<CR>gv=gv", opts)
+vim.set.keymap("v", "K", ":m '<-2<CR>gv=gv", opts)
 
 
 
