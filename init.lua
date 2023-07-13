@@ -255,8 +255,8 @@ vim.cmd([[nnoremap <leader>c :execute "set colorcolumn=" . (&colorcolumn == "" ?
 local opts = { noremap = true, silent = true }
 
 -- Up/Down to move selected text
-vim.set.keymap("v", "J", ":m '>+1<CR>gv=gv", opts)
-vim.set.keymap("v", "K", ":m '<-2<CR>gv=gv", opts)
+-- vim.set.keymap("v", "J", ":m '>+1<CR>gv=gv", opts)
+-- vim.set.keymap("v", "K", ":m '<-2<CR>gv=gv", opts)
 
 
 
