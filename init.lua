@@ -141,7 +141,11 @@ require('lazy').setup({
     -- Enable `lukas-reineke/indent-blankline.nvim`
     -- See `:help indent_blankline.txt`
     opts = {
-      char = '┊',
+      show_current_context = true,
+      show_current_context_start = true,
+      -- char = '┊',
+      -- char = 'ඞ',
+      char = '┆',
       show_trailing_blankline_indent = false,
     },
   },
@@ -247,16 +251,15 @@ vim.o.termguicolors = true
 
 
 
--- P.S. Thanks Cole!
 
+-- P.S. Thanks Cole!
 -- Toggle ruler at 81st 
 vim.cmd([[nnoremap <leader>c :execute "set colorcolumn=" . (&colorcolumn == "" ? "81" : "")<CR>]])
 
 local opts = { noremap = true, silent = true }
-
 -- Up/Down to move selected text
--- vim.set.keymap("v", "J", ":m '>+1<CR>gv=gv", opts)
--- vim.set.keymap("v", "K", ":m '<-2<CR>gv=gv", opts)
+vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv", opts)
+vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv", opts)
 
 
 
