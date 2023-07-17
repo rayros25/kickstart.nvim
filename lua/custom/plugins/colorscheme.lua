@@ -18,5 +18,6 @@ return {
     },
     -- bluish greenish
     'damage220/solas.vim',
-    'jackiehluo/vim-material'
+    'jackiehluo/vim-material',
+    'rebelot/kanagawa.nvim',
 }
