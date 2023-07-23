@@ -339,6 +339,14 @@ end
 vim.cmd("au FileType tex lua MiniPairs.map_buf(0, 'i', '$', {action = 'closeopen', pair = '$$'})")
 
 
+-- Material color scheme
+require('material').setup({
+  plugins = {
+    "neorg",
+  }
+})
+
+
 
 -- Oil
 -- default config taken from github page
