@@ -1,8 +1,9 @@
+-- To switch colorschemes, uncomment stuff
+-- Yeah, this is hella scuffed. I know.
 return {
-    -- purple
     {
         'maxmx03/fluoromachine.nvim',
-        priority = 1000,
+        -- priority = 1000,
         config = function ()
             require 'fluoromachine'.setup {
                 glow = false, -- basically just highlighting
@@ -17,8 +18,39 @@ return {
 
             }
             -- vim.cmd.colorscheme 'fluoromachine'
-            vim.cmd.colorscheme 'neon'
-            -- Yeah, this is hella scuffed. I know.
+            vim.cmd.colorscheme 'material'
+        end
+    },
+    {
+        'marko-cerovac/material.nvim',
+        priority = 1000,
+        config = function ()
+            require 'material'.setup {
+                contrast = {
+                    sidebars = false,
+                },
+                styles = {},
+                plugins = {
+                    "neorg",
+                },
+                lualine_style = "default", -- other option is "stealth"
+            }
+            vim.cmd.colorscheme 'material'
+        end
+    },
+    {
+        'rafamadriz/neon',
+        config = function()
+            -- require("neon").setup {
+            --     neon_style = "default",
+            --     neon_italic = true,
+            --     neon_bold = true
+            -- }
+            vim.g.neon_style = "default"
+            vim.g.neon_italic = true
+            vim.g.neon_bold = true
+
+            -- vim.cmd[[colorscheme neon]]
         end
     },
     {
@@ -34,6 +66,4 @@ return {
     'ajmwagar/vim-deus',
     'morhetz/gruvbox',
     'junegunn/seoul256.vim',
-    'rafamadriz/neon',
-    'marko-cerovac/material.nvim',
 }
