@@ -3,7 +3,7 @@
 return {
     {
         'maxmx03/fluoromachine.nvim',
-        -- priority = 1000,
+        priority = 1000,
         config = function ()
             require 'fluoromachine'.setup {
                 glow = false, -- basically just highlighting
@@ -23,7 +23,7 @@ return {
     },
     {
         'marko-cerovac/material.nvim',
-        priority = 1000,
+        -- priority = 1000,
         config = function ()
             require 'material'.setup {
                 contrast = {
@@ -35,7 +35,7 @@ return {
                 },
                 lualine_style = "default", -- other option is "stealth"
             }
-            vim.cmd.colorscheme 'material'
+            -- vim.cmd.colorscheme 'material'
         end
     },
     {
