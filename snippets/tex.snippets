@@ -11,6 +11,59 @@ snippet bigcup Arbitrary Union
 snippet bigcap Arbitrary Intersection
 	\\bigcap_{${2:subtext}}^{${3:supertext}}
 
+
+# Snippets for note-taking
+snippet ndef Definition
+	\\defn{${1:name}}{${0:def}}
+
+snippet ndefr Definition with Reference
+	\\defnr{${1:name}}{${2:ref}}{${0:def}}
+
+snippet nthm Theorem
+	\\thm{${1:name}}{${0:theorem}}
+
+snippet nthmr Theorem with Reference
+	\\thmr{${1:name}}{${2:ref}}{${0:theorem}}
+
+snippet nlem Lemma
+	\\lem{${1:name}}{${0:lemma}}
+
+snippet nlemp Lemma with Proof
+	\\lemp{${1:name}}{${2:lemma}}{${0:proof}}
+
+snippet ncor Corollary
+	\\cor{${1:name}}{${0:corollary}}
+
+snippet ncorp Corollary with Proof
+	\\corp{${1:name}}{${2:corollary}}{${0:proof}}
+
+snippet nprop Proposition
+	\\prop{${1:name}}{${0:proposition}}
+
+snippet npropp Proposition with Proof
+	\\propp{${1:name}}{${2:proposition}}{${0:proof}}
+
+snippet nclm Claim
+	\\clm{${1:name}}{${0:claim}}
+
+snippet nclmp Claim with Proof
+	\\clmp{${1:name}}{${2:claim}}{${0:proof}}
+
+snippet nfact Fact
+	\\fact{$0}
+
+snippet npf Proof
+	\\pf{$0}
+
+snippet nex Example
+	\\ex{$0}
+
+snippet nrmk Remark
+	\\rmk{$0}
+
+snippet rmkb Remark Block
+	\\rmkb{$0}
+
 # testing some stuff
 # snippet for
 # 	for ($1 = ${2:start}; ${1:i} < ${3:end}; $1${4:++}) {
