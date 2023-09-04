@@ -166,7 +166,7 @@ require('lazy').setup({
   -- NOTE: Next Step on Your Neovim Journey: Add/Configure additional "plugins" for kickstart
   --       These are some example plugins that I've included in the kickstart repository.
   --       Uncomment any of the lines below to enable them.
-  require 'kickstart.plugins.autoformat',
+  -- require 'kickstart.plugins.autoformat',
   require 'kickstart.plugins.debug',
 
   -- NOTE: The import below automatically adds your own plugins, configuration, etc from `lua/custom/plugins/*.lua`
@@ -185,6 +185,7 @@ vim.o.history = 150
 vim.o.showcmd = true
 vim.o.cursorline = true
 
+-- TODO: check this stuff
 -- Tab stuff
 vim.o.tabstop = 4
 vim.o.shiftwidth = 4
@@ -238,10 +239,14 @@ vim.o.completeopt = 'menuone,noselect'
 -- vim.o.termguicolors = true
 -- vim.o.termguicolors = false
 
-
 -- Cool markdown/Neorg eye candy
 vim.o.conceallevel = 2
 
+-- Make sure you can see tabs and stuff
+vim.opt.list = true
+-- vim.opt.listchars:append "eol:↴"
+-- vim.opt.listchars:append "tab:-→"
+vim.opt.listchars:append "tab:<=>"
 
 -- P.S. Thanks Cole!
 -- Toggle ruler at 81st
