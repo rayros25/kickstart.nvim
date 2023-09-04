@@ -1,18 +1,4 @@
 --[[
-
-=====================================================================
-==================== READ THIS BEFORE CONTINUING ====================
-=====================================================================
-
-Kickstart.nvim is *not* a distribution.
-
-Kickstart.nvim is a template for your own configuration.
-  The goal is that you can read every line of code, top-to-bottom, understand
-  what your configuration is doing, and modify it to suit your needs.
-
-  Once you've done that, you should start exploring, configuring and tinkering to
-  explore Neovim!
-
   If you don't know anything about Lua, I recommend taking some time to read through
   a guide. One possible example:
   - https://learnxinyminutes.com/docs/lua/
@@ -22,6 +8,7 @@ Kickstart.nvim is a template for your own configuration.
 I have left several `:help X` comments throughout the init.lua
 You should run that command and read that help section for more information.
 --]]
+
 -- Set <space> as the leader key
 -- See `:help mapleader`
 --  NOTE: Must happen before plugins are required (otherwise wrong leader will be used)
@@ -100,7 +87,7 @@ require('lazy').setup({
   },
 
   -- Useful plugin to show you pending keybinds.
-  { 'folke/which-key.nvim', opts = {} },
+  { 'folke/which-key.nvim',          opts = {} },
   {
     -- Adds git releated signs to the gutter, as well as utilities for managing changes
     'lewis6991/gitsigns.nvim',
@@ -114,7 +101,8 @@ require('lazy').setup({
         changedelete = { text = '~' },
       },
       on_attach = function(bufnr)
-        vim.keymap.set('n', '<leader>gp', require('gitsigns').prev_hunk, { buffer = bufnr, desc = '[G]o to [P]revious Hunk' })
+        vim.keymap.set('n', '<leader>gp', require('gitsigns').prev_hunk,
+          { buffer = bufnr, desc = '[G]o to [P]revious Hunk' })
         vim.keymap.set('n', '<leader>gn', require('gitsigns').next_hunk, { buffer = bufnr, desc = '[G]o to [N]ext Hunk' })
         vim.keymap.set('n', '<leader>ph', require('gitsigns').preview_hunk, { buffer = bufnr, desc = '[P]review [H]unk' })
       end,
@@ -129,8 +117,8 @@ require('lazy').setup({
       options = {
         icons_enabled = true,
         theme = 'auto',
-        component_separators = { left = '', right = ''},
-        section_separators = { left = '', right = ''},
+        component_separators = { left = '', right = '' },
+        section_separators = { left = '', right = '' },
       },
     },
   },
@@ -256,7 +244,7 @@ vim.o.conceallevel = 2
 
 
 -- P.S. Thanks Cole!
--- Toggle ruler at 81st 
+-- Toggle ruler at 81st
 vim.cmd([[nnoremap <leader>c :execute "set colorcolumn=" . (&colorcolumn == "" ? "81" : "")<CR>]])
 
 local opts = { noremap = true, silent = true }
@@ -269,7 +257,7 @@ vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv", opts)
 -- [[ Fine-tuning Some Plugins ]]
 
 -- Set up bufferline.nvim
-require("bufferline").setup{
+require("bufferline").setup {
   options = {
     offsets = {
       {
@@ -308,7 +296,7 @@ else
   -- vim.g.vimtex_view_sioyek_exe = '/Applications/sioyek.app/Contents/MacOS/sioyek'
 end
 
--- Mini.Pair 
+-- Mini.Pair
 -- only autocomplete for $$ in tex files
 vim.cmd("au FileType tex lua MiniPairs.map_buf(0, 'i', '$', {action = 'closeopen', pair = '$$'})")
 
@@ -636,7 +624,7 @@ local servers = {
   hls = {},
   texlab = {},
   -- ltex-ls = {},
--- NOTE: Install ltex-ls and tectonic manually with Mason, if necessary
+  -- NOTE: Install ltex-ls and tectonic manually with Mason, if necessary
 
   lua_ls = {
     Lua = {
