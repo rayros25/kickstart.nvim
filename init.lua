@@ -49,6 +49,9 @@ require('lazy').setup({
   -- Improve navigation with tmux
   'christoomey/vim-tmux-navigator',
 
+  -- undoo tree
+  'mbbill/undotree',
+
   -- NOTE: This is where your plugins related to LSP can be installed.
   --  The configuration is done below. Search for lspconfig to find it below.
   {
@@ -128,6 +131,7 @@ require('lazy').setup({
     'lukas-reineke/indent-blankline.nvim',
     -- Enable `lukas-reineke/indent-blankline.nvim`
     -- See `:help indent_blankline.txt`
+    main = "ibl",
     opts = {
       show_current_context = true,
       show_current_context_start = true,
