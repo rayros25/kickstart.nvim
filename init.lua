@@ -131,15 +131,16 @@ require('lazy').setup({
     'lukas-reineke/indent-blankline.nvim',
     -- Enable `lukas-reineke/indent-blankline.nvim`
     -- See `:help indent_blankline.txt`
-    main = "ibl",
-    opts = {
-      show_current_context = true,
-      show_current_context_start = true,
-      -- char = '┊',
-      -- char = 'ඞ',
-      char = '┆',
-      show_trailing_blankline_indent = false,
-    },
+    -- TODO: make this work
+    -- main = "ibl",
+    -- opts = {
+    --   show_current_context = true,
+    --   show_current_context_start = true,
+    --   -- char = '┊',
+    --   -- char = 'ඞ',
+    --   char = '┆',
+    --   show_trailing_blankline_indent = false,
+    -- },
   },
 
   -- Fuzzy Finder (files, lsp, etc)
