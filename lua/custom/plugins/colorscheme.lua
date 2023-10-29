@@ -17,8 +17,8 @@ return {
                 -- I'm not sure I get what this goes.
 
             }
-            vim.cmd.colorscheme 'fluoromachine'
-            -- vim.cmd.colorscheme 'material'
+            -- vim.cmd.colorscheme 'fluoromachine'
+            vim.cmd.colorscheme 'material-oceanic'
         end
     },
     {
