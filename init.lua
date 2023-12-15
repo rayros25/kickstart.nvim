@@ -112,6 +112,9 @@ require('lazy').setup({
     },
   },
 
+  -- renpy
+  { 'chaimleib/vim-renpy' },
+
   {
     -- Set lualine as statusline
     'nvim-lualine/lualine.nvim',
@@ -635,7 +638,7 @@ local servers = {
   clangd = {},
   -- gopls = {},
   pyright = {},
-  -- rust_analyzer = {},
+  rust_analyzer = {},
   -- tsserver = {},
   hls = {},
   texlab = {},
