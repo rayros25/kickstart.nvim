@@ -115,6 +115,9 @@ require('lazy').setup({
   -- renpy
   { 'chaimleib/vim-renpy' },
 
+  -- for funsies
+  { 'eandrju/cellular-automaton.nvim' },
+
   {
     -- Set lualine as statusline
     'nvim-lualine/lualine.nvim',

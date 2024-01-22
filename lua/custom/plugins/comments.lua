@@ -3,7 +3,15 @@ return {
         'echasnovski/mini.comment',
         version = false,
         config = function ()
-            require('mini.comment').setup()
+            require('mini.comment').setup({
+                options = {
+                    custom_commentstring = function ()
+                        if vim.bo.filetype == "renpy" then
+                            return '# %s'
+                        end
+                    end
+                }
+            })
         end
     },
     {
