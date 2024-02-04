@@ -67,9 +67,10 @@ return {
                 dashboard.button("q", "  Quit", ":qa<CR>")
             }
 
-            -- local handle, err = io.popen("fortune -s")
-            local handle, err = io.popen("fortune splashes") -- this uses a custom fortune file 
-                                                             -- of minecraft splash text
+            local handle, err = io.popen("fortune -s")
+            -- I gave up on minecraft one because I have to install it each time
+            -- local handle, err = io.popen("fortune splashes") -- this uses a custom fortune file 
+            --                                                  -- of minecraft splash text
             if err or handle == nil then
                 dashboard.section.footer.val = "May the truth be found."
                 alpha.setup(dashboard.opts)
