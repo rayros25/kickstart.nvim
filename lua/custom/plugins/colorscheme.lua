@@ -66,4 +66,5 @@ return {
     'ajmwagar/vim-deus',
     'morhetz/gruvbox',
     'junegunn/seoul256.vim',
+    'doki-theme/doki-theme-vim',
 }
