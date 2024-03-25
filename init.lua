@@ -49,6 +49,11 @@ require('lazy').setup({
   -- Improve navigation with tmux
   'christoomey/vim-tmux-navigator',
 
+  -- I LOVE LEAN!!!!
+  'Julian/lean.nvim',
+  -- something about dap? it wants this
+  'nvim-neotest/nvim-nio',
+
   -- undoo tree
   'mbbill/undotree',
 
