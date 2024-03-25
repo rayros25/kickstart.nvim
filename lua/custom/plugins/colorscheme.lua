@@ -30,9 +30,6 @@ return {
                     sidebars = false,
                 },
                 styles = {},
-                plugins = {
-                    "neorg",
-                },
                 lualine_style = "default", -- other option is "stealth"
             }
             -- vim.cmd.colorscheme 'material'
