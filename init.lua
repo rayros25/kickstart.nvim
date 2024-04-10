@@ -50,7 +50,7 @@ require('lazy').setup({
   'christoomey/vim-tmux-navigator',
 
   -- I LOVE LEAN!!!!
-  'Julian/lean.nvim',
+  -- 'Julian/lean.nvim',
   -- something about dap? it wants this
   'nvim-neotest/nvim-nio',
 
